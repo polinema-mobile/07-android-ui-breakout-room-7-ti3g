@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SendDataForm</string>
+    <string-array name="array_jurusan">
+        <item>Akuntansi</item>
+        <item>Teknologi Informasi</item>
+        <item>Teknik Mesin</item>
+    </string-array>
+</resources>
