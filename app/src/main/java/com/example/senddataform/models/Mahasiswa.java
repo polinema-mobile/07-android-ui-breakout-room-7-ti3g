@@ -13,13 +13,56 @@ public class Mahasiswa implements Parcelable {
         this.gender = gender;
         this.jurusan = jurusan;
     }
-
+    
+    public Mahasiswa(){
+    }
+    
+    public String getNama(){
+        return nama;
+    }
+    
+    public void setNama(String nama){
+        this.nama = nama;
+    }
+    
+    public String getNim(){
+        return nim;
+    }
+    
+    public void setNim(String nim){
+        this.nim = nim;
+    }
+    
+    public String getTanggal(){
+        return tanggal;
+    }
+    
+    public void setTanggal(String tanggal){
+        this.tanggal = tanggal;
+    }
+    
+    public String getGender(){
+        return gender;
+    }
+    
+    public void setGender(String gender){
+        this.gender = gender;
+    }
+    
+    public String getJurusan(){
+        return jurusan;
+    }
+    
+    public void setJurusan(String jurusan){
+        this.jurusan = jurusan;
+    }
+    
     protected Mahasiswa(Parcel in) {
-        nama = in.readString();
-        nim = in.readString();
-        tanggal = in.readString();
-        gender = in.readString();
-        jurusan = in.readString();
+        this.nama = in.readString();
+        this.nim = in.readString();
+        this.tanggal = in.readString();
+        this.gender = in.readString();
+        this.jurusan = in.readString();
     }
 
     @Override
@@ -36,7 +79,7 @@ public class Mahasiswa implements Parcelable {
         return 0;
     }
 
-    public static final Creator<Mahasiswa> CREATOR = new Creator<Mahasiswa>() {
+    public static final Parcelable.Creator<Mahasiswa> CREATOR = new Parcelable.Creator<Mahasiswa>() {
         @Override
         public Mahasiswa createFromParcel(Parcel in) {
             return new Mahasiswa(in);
